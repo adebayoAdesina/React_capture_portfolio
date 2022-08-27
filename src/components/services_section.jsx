@@ -4,11 +4,13 @@ import diaphragm from '../img/diaphragm.svg';
 import money from '../img/money.svg';
 import teamwork from '../img/teamwork.svg';
 import homeTwo from '../img/home2.png';
+import { About, Description, Image, } from "./styled";
+import styled from 'styled-components';
 
 const ServicesSection = () => {
   return (
-    <div className="service">
-      <div className="description">
+    <Services>
+      <Description>
         <h2>High <span>quality</span> services</h2>
         <div className="cards">
           <div className="card">
@@ -51,12 +53,14 @@ const ServicesSection = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="image">
+      </Description>
+      <Image>
         <img src={homeTwo} alt="homeTwo" />
-      </div>
-    </div>
+      </Image>
+    </Services>
   )
 }
+
+const Services = styled(About)``;
 
 export default ServicesSection
