@@ -9,6 +9,7 @@ import Nav from './components/nav';
 import { Route, Routes } from 'react-router-dom';
 import ContactUs from './components/pages/contact_us';
 import OurWork from './components/pages/our_work';
+import MovieDetail from './movie_detail';
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
     <Nav/>
     <Routes>
       <Route path='contactUs' element={<ContactUs/>}  exact />
-      <Route  path='ourWork' element={<OurWork/>}/>
-      <Route exact path='/' element={<AboutPage/>} />
+      <Route  path='ourWork' element={<OurWork/>} exact/>
+      <Route exact path='/' element={<AboutPage/>}/>
+      <Route exact path='/work/:id' element={<MovieDetail/>} />
       
       
     </Routes>
