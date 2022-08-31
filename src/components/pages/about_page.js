@@ -1,16 +1,23 @@
-import React from 'react'
-import AboutSection from '../about_section'
-import FaqSection from '../faq_section'
-import ServicesSection from '../services_section'
+import React from "react";
+import AboutSection from "../about_section";
+import FaqSection from "../faq_section";
+import ServicesSection from "../services_section";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const AboutPage = () => {
   return (
-    <div>
-        <AboutSection/>
-        <ServicesSection/>
-        <FaqSection/>
-    </div>
-  )
-}
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <AboutSection />
+      <ServicesSection />
+      <FaqSection />
+    </motion.div>
+  );
+};
 
-export default AboutPage
+export default AboutPage;
