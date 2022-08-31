@@ -22,8 +22,6 @@ function App() {
       <Route  path='ourWork' element={<OurWork/>} exact/>
       <Route exact path='/' element={<AboutPage/>}/>
       <Route exact path='/work/:id' element={<MovieDetail/>} />
-      
-      
     </Routes>
     </>
   );
