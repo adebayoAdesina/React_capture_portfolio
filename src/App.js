@@ -11,12 +11,14 @@ import ContactUs from "./components/pages/contact_us";
 import OurWork from "./components/pages/our_work";
 import MovieDetail from "./components/pages/movie_detail";
 import { AnimatePresence } from "framer-motion";
+import ScrollTop from "./components/scroll_top";
 
 function App() {
   const location = useLocation()
   return (
     <>
       <GlobalStyle />
+      <ScrollTop/>
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
@@ -26,6 +28,7 @@ function App() {
           <Route exact path="/work/:id" element={<MovieDetail />} />
         </Routes>
       </AnimatePresence>
+    
     </>
   );
 }
