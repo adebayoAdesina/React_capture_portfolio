@@ -12,13 +12,13 @@ import { fade } from "./animation";
 const ServicesSection = () => {
   const [element, controls] = UseScroll();
   return (
-    <Services ref={element} variants={fade} animate={controls} initial='hidden'>
+    <Services ref={element} variants={fade} animate={controls} initial="hidden">
       <Description>
         <h2>
           High <span>quality</span> services
         </h2>
         <Cards>
-          <Card>
+          <Card >
             <div className="icon">
               <img src={clock} alt="clock" />
               <h3>Efficient</h3>
@@ -71,6 +71,10 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 992px) {
+    flex-wrap: nowrap;
+    
+  }
 `;
 
 const Card = styled.div`
@@ -85,6 +89,13 @@ const Card = styled.div`
       color: black;
       padding: 1rem;
       border-radius: 20rem;
+    }
+  }
+  @media (max-width: 992px) {
+    
+    .icon {
+      display: block;
+      
     }
   }
 `;

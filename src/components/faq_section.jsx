@@ -79,5 +79,13 @@ const Faq = styled(About)`
       padding: 1rem 0rem;
     }
   }
+  @media (max-width: 992px) {
+    padding: 0 5rem 0 5rem;
+    .question {
+    padding: 0rem;
+    cursor: pointer;
+    
+  }
+  }
 `;
 export default FaqSection;

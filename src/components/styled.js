@@ -8,6 +8,10 @@ export const About = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Description = styled.div`
@@ -16,6 +20,12 @@ export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+  }
+  @media (max-width: 992px) {
+    padding-right: 0rem;
+    order: 2;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
@@ -27,6 +37,9 @@ export const Image = styled.div`
     width: 100%;
     height: 80vh;
     object-fit: cover;
+  }
+  @media (max-width: 992px) {
+    order: 1;
   }
 `;
 
